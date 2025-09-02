@@ -10,15 +10,24 @@
 		padding: 0px 20px 0px 20px;
 	}
 	
+	.button-collection {
+		display: flex;
+		align-items: center;
+	}
+	
 	button {
 		font-size: 18px;
 	}
 </style>
 
-<main class="main">
-	<button matButton="filled" (click)="decrement()">Decrement</button>
-	<h1>{{counter()}}</h1>
-	<button matButton="filled" (click)="increment()">Increment</button>
+<main>
+	<div class="button-collection">
+		<button matButton="filled" (click)="decrementBy10()">-10</button>
+		<button matButton="filled" (click)="decrementBy1()">-1</button>
+		<h1>{{counter()}}</h1>
+		<button matButton="filled" (click)="incrementBy1()">+1</button>
+		<button matButton="filled" (click)="incrementBy10()">+10</button>
+	</div>
 </main>
 
 <router-outlet />

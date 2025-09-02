@@ -12,11 +12,19 @@ import { MatButtonModule } from '@angular/material/button';
 export class App {
   counter = signal(0);
   
-  increment() {
+  incrementBy1() {
 	  this.counter.set(this.counter() + 1);
   }
   
-  decrement() {
+  incrementBy10() {
+	  this.counter.set(this.counter() + 10);
+  }
+  
+  decrementBy1() {
 	  this.counter.set(this.counter() - 1);
+  }
+  
+  decrementBy10() {
+	  this.counter.set(this.counter() - 10);
   }
 }
