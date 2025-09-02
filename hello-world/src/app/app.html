@@ -1,9 +1,24 @@
+<style>
+	main {
+		display: flex;
+		justify-content: center;
+		height: 80vh;
+		align-items: center;
+	}
+	
+	h1 {
+		padding: 0px 20px 0px 20px;
+	}
+	
+	button {
+		font-size: 18px;
+	}
+</style>
+
 <main class="main">
-  <div class="content">
-	<button matButton="outlined" (click)="decrement()">Decrement</button>
-	<p>Current Count: {{counter()}}</p> 
-    <button matButton="outlined" (click)="increment()">Increment</button>
-  </div>
+	<button matButton="filled" (click)="decrement()">Decrement</button>
+	<h1>{{counter()}}</h1>
+	<button matButton="filled" (click)="increment()">Increment</button>
 </main>
 
 <router-outlet />
